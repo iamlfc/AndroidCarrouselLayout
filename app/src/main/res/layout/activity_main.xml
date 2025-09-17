@@ -18,61 +18,72 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent">
       <ImageView
+          android:scaleType="centerCrop"
           android:src="@mipmap/image1"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
+          android:layout_width="120dp"
+          android:layout_height="180dp" />
       <ImageView
+          android:scaleType="centerCrop"
           android:src="@mipmap/image2"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
+          android:layout_width="120dp"
+          android:layout_height="180dp"/>
       <ImageView
+          android:scaleType="centerCrop"
           android:src="@mipmap/image3"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
+          android:layout_width="120dp"
+          android:layout_height="180dp" />
       <ImageView
           android:src="@mipmap/image4"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
+          android:scaleType="centerCrop"
+          android:layout_width="120dp"
+          android:layout_height="180dp" />
       <ImageView
           android:src="@mipmap/image5"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
-      <ImageView
+          android:scaleType="centerCrop"
+          android:layout_width="120dp"
+          android:layout_height="180dp" />
+     <ImageView
           android:src="@mipmap/image6"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
+          android:layout_width="120dp"
+          android:scaleType="centerCrop"
+          android:layout_height="180dp" />
       <ImageView
-          android:src="@mipmap/image7"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
+            android:src="@mipmap/image7"
+            android:scaleType="centerCrop"
+            android:layout_width="120dp"
+            android:layout_height="180dp" />
+         <ImageView
+              android:src="@mipmap/image8"
+              android:scaleType="centerCrop"
+              android:layout_width="120dp"
+              android:layout_height="180dp"/>
       <ImageView
-          android:src="@mipmap/image8"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
-      <ImageView
+          android:scaleType="centerCrop"
           android:src="@mipmap/image9"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
-      <ImageView
+          android:layout_width="120dp"
+          android:layout_height="180dp"/>
+   <ImageView
           android:src="@mipmap/image10"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
-      <ImageView
-          android:src="@mipmap/image11"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
-      <ImageView
-          android:src="@mipmap/image12"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
-      <ImageView
-          android:src="@mipmap/image13"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
-      <ImageView
-          android:src="@mipmap/image14"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content" />
+          android:scaleType="centerCrop"
+          android:layout_width="120dp"
+          android:layout_height="180dp" />
+      <!--   <ImageView
+      android:scaleType="centerCrop"
+      android:src="@mipmap/image11"
+      android:layout_width="120dp"
+      android:layout_height="180dp"/>
+<ImageView
+           android:src="@mipmap/image12"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <ImageView
+           android:src="@mipmap/image13"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />
+       <ImageView
+           android:src="@mipmap/image14"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content" />-->
    </com.dalong.carrousellayout.CarrouselLayout>
 
 

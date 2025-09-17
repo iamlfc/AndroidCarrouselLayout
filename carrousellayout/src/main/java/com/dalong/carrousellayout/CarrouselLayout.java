@@ -180,6 +180,30 @@ public class CarrouselLayout  extends RelativeLayout{
             mCarrouselViews.get(i).setTranslationX(x0 + rotationZ_x);
             mCarrouselViews.get(i).setTranslationY(rotationX_y + rotationZ_y);
         }
+//改动后
+       /* for (int i = 0; i < mCarrouselViews.size(); i++) {
+            double radians = mAngle + 180 - i * 360 / viewCount;
+            float x0 = (float) Math.sin(Math.toRadians(radians)) * mCarrouselR;
+            float y0 = (float) Math.cos(Math.toRadians(radians)) * mCarrouselR;
+
+            // 优化缩放计算
+            float scale0 = (mDistance - y0) / (mDistance + mCarrouselR);
+
+            // 确保缩放比例在合理范围内
+            scale0 = Math.max(scale0, 0.5f); // 设置最小缩放比例
+            scale0 = Math.min(scale0, 1.0f); // 设置最大缩放比例
+
+            mCarrouselViews.get(i).setScaleX(scale0);
+            mCarrouselViews.get(i).setScaleY(scale0);
+
+            // 其余位置计算代码保持不变...
+            float rotationX_y = (float) Math.sin(Math.toRadians(mRotationX * Math.cos(Math.toRadians(radians)))) * mCarrouselR;
+            float rotationZ_y = -(float) Math.sin(Math.toRadians(-mRotationZ)) * x0;
+            float rotationZ_x = (((float) Math.cos(Math.toRadians(-mRotationZ)) * x0) - x0);
+
+            mCarrouselViews.get(i).setTranslationX(x0 + rotationZ_x);
+            mCarrouselViews.get(i).setTranslationY(rotationX_y + rotationZ_y);
+        }*/
         List<View> arrayViewList =new ArrayList<>();
         arrayViewList.clear();
         for (int i=0;i<mCarrouselViews.size();i++){
