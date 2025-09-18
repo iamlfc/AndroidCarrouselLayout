@@ -166,7 +166,7 @@ public class CarrouselLayout  extends RelativeLayout{
      * 初始化 计算平均角度后各个子view的位置
      */
     public  void refreshLayout() {
-        for (int i=0;i<mCarrouselViews.size();i++){
+   /*     for (int i=0;i<mCarrouselViews.size();i++){
             double radians = mAngle + 180 - i * 360 / viewCount;
             float x0 = (float) Math.sin(Math.toRadians(radians)) * mCarrouselR;
             float y0 = (float) Math.cos(Math.toRadians(radians)) * mCarrouselR;
@@ -179,7 +179,28 @@ public class CarrouselLayout  extends RelativeLayout{
 
             mCarrouselViews.get(i).setTranslationX(x0 + rotationZ_x);
             mCarrouselViews.get(i).setTranslationY(rotationX_y + rotationZ_y);
+        }*/
+        for (int i = 0; i < mCarrouselViews.size(); i++) {
+            double radians = mAngle + 180 - i * 360 / viewCount;
+            float x0 = (float) Math.sin(Math.toRadians(radians)) * mCarrouselR;
+            float y0 = (float) Math.cos(Math.toRadians(radians)) * mCarrouselR;
+            float scale0 = (mDistance - y0) / (mDistance + mCarrouselR);
+
+            // 限制缩放比例，减小缩放幅度
+            scale0 = Math.max(scale0, 0.6f); // 最小缩放比例
+            scale0 = Math.min(scale0, 1.1f); // 最大缩放比例
+
+            mCarrouselViews.get(i).setScaleX(scale0);
+            mCarrouselViews.get(i).setScaleY(scale0);
+
+            float rotationX_y = (float) Math.sin(Math.toRadians(mRotationX * Math.cos(Math.toRadians(radians)))) * mCarrouselR;
+            float rotationZ_y = -(float) Math.sin(Math.toRadians(-mRotationZ)) * x0;
+            float rotationZ_x = (((float) Math.cos(Math.toRadians(-mRotationZ)) * x0) - x0);
+
+            mCarrouselViews.get(i).setTranslationX(x0 + rotationZ_x);
+            mCarrouselViews.get(i).setTranslationY(rotationX_y + rotationZ_y);
         }
+
 //改动后
        /* for (int i = 0; i < mCarrouselViews.size(); i++) {
             double radians = mAngle + 180 - i * 360 / viewCount;
